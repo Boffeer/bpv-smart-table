@@ -2,6 +2,9 @@ section.calculator
 	.container
 		.calculator-content
 			.calculator-img
+				.calculator-img-frame
+					#frame-1.frame-img
+					#frame-2.frame-img
 				.calculator-img-materials
 					#material-1.material-img
 					#material-2.material-img
@@ -11,82 +14,99 @@ section.calculator
 					#material-6.material-img
 					#material-7.material-img
 					#material-8.material-img
-				.calculato-img-frame
-					.frame-1__img
-					.frame-2__img
 
-			.calculator-selector
-				form.calculator-form
+			.calculator-controls
+				iframe(
+					id='hidden-iframe',
+					name="hidden-iframe",
+					style="display:none"
+					onload="if(costSubmitted){window.location='https://vk.com';}")
+
+				form.calculator-form(
+					action='https://docs.google.com/forms/u/0/d/e/1FAIpQLSc9KCxTnYm1cmeCFQ3FRL9KPFq-WjmWf8vGzswMZaaHjspeYQ/formResponse',
+					method='POST',
+					target='hidden-iframe',
+					onsubmit='costSubmitted=true;'
+				)
 
 
-					p.calculator-materials
-						label.calculator-check
+					.calculator-materials
+						label.calculator-check(for="material-label--1")
 							input.calculator-materials-item.materal-1(
+							checked,
+							name="entry.1772279993",
+							id="material-label--1"
 							type="radio",
-							name="material",
 							value="1",
 							required)
 							| Имя маретриала
 							span.check__box
 
-						label.calculator-check
+						label.calculator-check(for="material-label--2")
 							input.calculator-materials-item.materal-2(
+							name="entry.1772279993",
+							id="material-label--2"
 							type="radio",
-							name="material",
 							value="2",
 							required)
 							| Имя маретриала
 							span.check__box
 
-						label.calculator-check
+						label.calculator-check(for="material-label--3")
 							input.calculator-materials-item.materal-3(
+							name="entry.1772279993",
+							id="material-label--3"
 							type="radio",
-							name="material",
 							value="3",
 							required)
 							| Имя маретриала
 							span.check__box
 
-						label.calculator-check
+						label.calculator-check(for="material-label--4")
 							input.calculator-materials-item.materal-4(
+							name="entry.1772279993",
+							id="material-label--4"
 							type="radio",
-							name="material",
 							value="4",
 							required)
 							| Имя маретриала
 							span.check__box
 
-						label.calculator-check
+						label.calculator-check(for="material-label--5")
 							input.calculator-materials-item.materal-5(
+							name="entry.1772279993",
+							id="material-label--5"
 							type="radio",
-							name="material",
 							value="5",
 							required)
 							| Имя маретриала
 							span.check__box
 
-						label.calculator-check
+						label.calculator-check(for="material-label--6")
 							input.calculator-materials-item.materal-6(
+							name="entry.1772279993",
+							id="material-label--6"
 							type="radio",
-							name="material",
 							value="6",
 							required)
 							| Имя маретриала
 							span.check__box
 
-						label.calculator-check
+						label.calculator-check(for="material-label--7")
 							input.calculator-materials-item.materal-7(
+							name="entry.1772279993",
+							id="material-label--7"
 							type="radio",
-							name="material",
 							value="7",
 							required)
 							| Имя маретриала
 							span.check__box
 
-						label.calculator-check
+						label.calculator-check(for="material-label--8")
 							input.calculator-materials-item.materal-8(
+							name="entry.1772279993",
+							id="material-label--8"
 							type="radio",
-							name="material",
 							value="8",
 							required)
 							| Имя маретриала
@@ -94,35 +114,68 @@ section.calculator
 
 
 
-					p.calculator-frame
-						label.calculator-check(for="")
-							input.calculator-frame__item.frame-1(
+					.calculator-frame
+						label.calculator-check
+							input.calculator-frame-item.frame-1#frame-1(
+							checked,
+							name="entry.674285196",
 							type="radio",
-							name="frame",
+							value="1",
 							required)
-						label.calculator-check(for="")
-							input.calculator-frame__item.frame-2(
+							| Черный фрейм
+							span.check__box
+						label.calculator-check
+							input.calculator-frame-item.frame-2#frame-2(
+							name="entry.674285196",
 							type="radio",
-							name="frame",
+							value="2",
 							required)
-
-
-
-					p.calcualtor-table-sizes
-						label.calculator-check(for="")
-							input.calculator-size__item.size-1(type="radio", name="size")
-							span.check__box
-						label.calculator-check(for="")
-							input.calculator-size__item.size-2(type="radio", name="size")
-							span.check__box
-						label.calculator-check(for="")
-							input.calculator-size__item.size-3(type="radio", name="size")
-							span.check__box
-						label.calculator-check(for="")
-							input.calculator-size__item.size-4(type="radio", name="size")
+							| Белый фрейм
 							span.check__box
 
 
-					p.calculator-cost
-						span.calculator-cost__info
-						button.btn.calculator-submit Закзаать
+
+					.calcualtor-table-sizes
+						label.calculator-check
+							input.calculator-size-item.size-1#size-1(
+							checked,
+							name="entry.756698818",
+							type="radio",
+							value="1")
+							| 100x100
+							span.check__box
+						label.calculator-check
+							input.calculator-size-item.size-2#size-2(
+							name="entry.756698818",
+							type="radio",
+							value="2")
+							| 200x200
+							span.check__box
+						label.calculator-check
+							input.calculator-size-item.size-3#size-3(
+							name="entry.756698818",
+							type="radio",
+							value="3")
+							| 300x300
+							span.check__box
+						label.calculator-check
+							input.calculator-size-item.size-4#size-4(
+							name="entry.756698818",
+							type="radio",
+							value="4")
+							| 400x400
+							span.check__box
+
+
+					.calculator-phone-pop
+						input(
+							name="entry.875101439",
+							type="tel",
+							required)#phone-id
+					.calculator-cost Ваша цена
+						input(
+							name="entry.1706720507"
+							type="text"
+							disabled
+							value="111").calculator-cost__info
+						button.btn.calculator-submit(type="submit") Заказать

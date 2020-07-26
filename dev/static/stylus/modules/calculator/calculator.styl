@@ -10,26 +10,53 @@
 	left -1.2em
 	top 0
 
+// materials
 .calculator-materials-item
-	position absolute
-	appearance none
-.calculator-materials-item:checked + .check__box
-	background-color red
-
-
+	// position absolute
+	// appearance none
+	&:checked + .check__box
+		background-color red
 
 // materials-img
-
 .material-img
 	display none
-
+	width 200px
+	height 200px
 #material-1
-	width 200px
-	height 200px
 	background-image url("https://i.pinimg.com/736x/98/d8/4c/98d84c9c624b3576d978c827d0780798--the-number--white-image.jpg")
-
 #material-2
+	background-image url("https://for-teacher.ru/edu/data/img/pic-023wvfl6tn-007.jpg")
+
+// frames
+.calculator-frame-item
+	position absolute
+	appearance none
+	&:checked + .check__box
+		background-color green
+
+// frame-type
+.frame-img
+	display none
 	width 200px
 	height 200px
-	background-image url("https://for-teacher.ru/edu/data/img/pic-023wvfl6tn-007.jpg")
-//
+#frame-1
+	background #000000
+#frame-2
+	background-color magenta
+
+// sizes
+.calculator-size-item
+	position absolute
+	appearance none
+	&:checked + .check__box
+		background-color pink
+
+// table-preview
+.calculator-img
+	&-materials
+		position absolute
+		left 0
+
+	&-frame
+		position absolute
+		left 40px
