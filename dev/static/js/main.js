@@ -59,7 +59,7 @@ $('.calculator-check').click(function()
 
 $('.calculator-cost__info').val(materialModifier[1] +
 	frameModifier[1] + sizeModifier[1]).change();
-	
+
 $('.calculator-form').submit(function(e) {
     $(':disabled').each(function(e) {
         $(this).removeAttr('disabled');

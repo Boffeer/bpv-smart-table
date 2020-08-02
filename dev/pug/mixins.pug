@@ -2,3 +2,9 @@ mixin icon(name,mod)
 	- mod = mod || ''
 	svg(class="icon icon-" + name + ' ' + mod)
 		use(xlink:href="static/img/svg/symbol/sprite.svg#" + name)
+
+
+mixin bullet(path, text)
+	.bullet
+		img(src="static/img/content/"+path+'.png').bullet__icon
+		p.bullet__text= text
