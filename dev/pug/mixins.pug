@@ -8,3 +8,17 @@ mixin bullet(path, text)
 	.bullet
 		img(src="static/img/content/"+path+'.png').bullet__icon
 		p.bullet__text= text
+
+mixin stat(path, text)
+	.stat
+		img(src="static/img/content/7-features/"+path+'.jpg').stat__pic
+		p.stat__text= text
+
+mixin trinket(trinketNumber, img, title, descr, cost, feature1, feature2, feature3)
+	.trinket-item
+		img(src="static/img/content/10-trinkets/"+img+".jpg", alt= title)
+		p= descr
+		p.trinket-feature= feature1
+		p.trinket-feature= feature2
+		p.trinket-feature= feature3
+		button(class="trinket-"+trinketNumber) Цена #{cost} руб.
