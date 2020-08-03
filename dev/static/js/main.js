@@ -1,9 +1,39 @@
 $(document).ready(function(){
     svg4everybody({});
-	//calculator
+
+		// slider
+$('.trinkets-slider').slick({
+  centerMode: true,
+  centerPadding: '60px',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+$('.who-slider').slick({
+	dots: true
+});
 	// ready end
 });
 
+	//calculator
 // forms
 var costSubmitted = false;
 
@@ -23,6 +53,18 @@ function getCurrentCost() {
 }
 
 // ---- calculator radio check
+$('.calculator-height-item').click(function(){
+	let modifier = $('#frame-' + $(this).val()),
+		modifierAr = $(this).val();
+	$('.frame-img').not(modifier).hide(0);
+	modifier.fadeIn(500);
+	console.log(modifier);
+	console.log(frameModifier[modifierAr]);
+
+	return currentFrame = frameModifier[modifierAr];
+});
+
+
 $('.calculator-materials-item').click(function(){
 	var material = $('#material-' + $(this).val()),
 			materialAr = $(this).val();
@@ -65,3 +107,4 @@ $('.calculator-form').submit(function(e) {
         $(this).removeAttr('disabled');
     })
 });
+

@@ -17,8 +17,9 @@ mixin stat(path, text)
 mixin trinket(trinketNumber, img, title, descr, cost, feature1, feature2, feature3)
 	.trinket-item
 		img(src="static/img/content/10-trinkets/"+img+".jpg", alt= title)
-		p= descr
+		h3.trinket-title= title
+		p.trinket-descr= descr
 		p.trinket-feature= feature1
 		p.trinket-feature= feature2
 		p.trinket-feature= feature3
-		button(class="trinket-"+trinketNumber) Цена #{cost} руб.
+		button.btn-secondary(class="trinket-"+trinketNumber) Цена #{cost} руб.

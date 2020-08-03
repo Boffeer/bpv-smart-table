@@ -29,8 +29,184 @@ section.calculator
 					onsubmit='costSubmitted=true;'
 				)
 
+					.calculator-height.calculator-controller
+						h3.calculator-field-name Толщина, мм
+						.calculator-height
+							label.calculator-check(for="height-label--1")
+								input.calculator-height-item.height-1(
+								checked,
+								name="height",
+								id="height-label--1"
+								type="radio",
+								value="18",
+								required)
+								| 18
+								span.check__box
 
-					.calculator-materials
+							label.calculator-check(for="height-label--2")
+								input.calculator-height-item.height-1(
+								checked,
+								name="height",
+								id="height-label--2"
+								type="radio",
+								value="36",
+								required)
+								| 36
+								span.check__box
+
+							label.calculator-check(for="height-label--3")
+								input.calculator-height-item.height-1(
+								checked,
+								name="height",
+								id="height-label--3"
+								type="radio",
+								value="Без столешницы",
+								required)
+								| Без столешницы
+								span.check__box
+
+
+					.calculator-width.calculator-controller
+						h3.calculator-field-name Ширина, мм
+						.calculator-width-inner
+							label.calculator-check(for="width-label--1")
+								input.calculator-width-item.width-1(
+								checked,
+								name="width",
+								id="width-label--1"
+								type="radio",
+								value="750",
+								required)
+								| 750
+								span.check__box
+							label.calculator-check(for="width-label--2")
+								input.calculator-width-item.width-1(
+								checked,
+								name="width",
+								id="width-label--2"
+								type="radio",
+								value="18",
+								required)
+								| 800
+								span.check__box
+							label.calculator-check(for="width-label--3")
+								input.calculator-width-item.width-1(
+								checked,
+								name="width",
+								id="width-label--3"
+								type="radio",
+								value="850",
+								required)
+								| 850
+								span.check__box
+							label.calculator-check(for="width-label--4")
+								input.calculator-width-item.width-1(
+								checked,
+								name="width",
+								id="width-label--4"
+								type="radio",
+								value="900",
+								required)
+								| 900
+								span.check__box
+
+
+
+					.calculator-length.calculator-controller
+						h3.calculator-field-name Длина, мм
+						.calculator-length-inner
+							label.calculator-check(for="length-label--1")
+								input.calculator-length-item.length-1(
+								checked,
+								name="length",
+								id="length-label--1"
+								type="radio",
+								value="1200",
+								required)
+								| 1200
+							label.calculator-check(for="length-label--2")
+								input.calculator-length-item.length-1(
+								checked,
+								name="length",
+								id="length-label--2"
+								type="radio",
+								value="1500",
+								required)
+								| 1500
+							label.calculator-check(for="length-label--3")
+								input.calculator-length-item.length-1(
+								checked,
+								name="length",
+								id="length-label--3"
+								type="radio",
+								value="1700",
+								required)
+								| 1700
+							label.calculator-check(for="length-label--4")
+								input.calculator-length-item.length-1(
+								checked,
+								name="length",
+								id="length-label--4"
+								type="radio",
+								value="2000",
+								required)
+								| 2000
+
+
+
+
+					.calculator-corners.calculator-controller
+						h3.calculator-field-name Скруглять углы?
+						.calculator-corners-inner
+							label.calculator-check(for="corners-label--1")
+								input.calculator-corners-item.corners-1(
+								checked,
+								name="corners",
+								id="corners-label--1",
+								type="radio",
+								value="Да",
+								required)
+								| Да
+							label.calculator-check(for="corners-label--2")
+								input.calculator-corners-item.corners-1(
+								checked,
+								name="corners",
+								id="corners-label--2",
+								type="radio",
+								value="Нет",
+								required)
+								| Нет
+
+
+
+					.calculator-frame.calculator-controller
+						h3.calculator-field-name Цвет механизма
+						.calculator-frame-inner
+							label.calculator-check(for="frame-label--1")
+								input.calculator-frame-item.frame-1(
+								checked,
+								name="entry.674285196",
+								id="frame-label--1",
+								type="radio",
+								value="1",
+								required)
+								| Черный
+								span.check__box
+
+							label.calculator-check(for="frame-label--2")
+								input.calculator-frame-item.frame-2(
+								name="entry.674285196",
+								id="frame-label--2",
+								type="radio",
+								value="2",
+								required)
+								| Белый
+								span.check__box
+
+
+
+					.calculator-materials.calculator-controller
+						h3.calculator-field-name Цвет столешницы
 						label.calculator-check(for="material-label--1")
 							input.calculator-materials-item.materal-1(
 							checked,
@@ -39,7 +215,7 @@ section.calculator
 							type="radio",
 							value="1",
 							required)
-							| Имя маретриала
+							| Белый снег
 							span.check__box
 
 						label.calculator-check(for="material-label--2")
@@ -49,7 +225,7 @@ section.calculator
 							type="radio",
 							value="2",
 							required)
-							| Имя маретриала
+							| Северное дерево светлое
 							span.check__box
 
 						label.calculator-check(for="material-label--3")
@@ -59,7 +235,7 @@ section.calculator
 							type="radio",
 							value="3",
 							required)
-							| Имя маретриала
+							| Серый камень
 							span.check__box
 
 						label.calculator-check(for="material-label--4")
@@ -69,7 +245,7 @@ section.calculator
 							type="radio",
 							value="4",
 							required)
-							| Имя маретриала
+							| Дуб молочный
 							span.check__box
 
 						label.calculator-check(for="material-label--5")
@@ -79,7 +255,7 @@ section.calculator
 							type="radio",
 							value="5",
 							required)
-							| Имя маретриала
+							| Дуб сонома
 							span.check__box
 
 						label.calculator-check(for="material-label--6")
@@ -89,7 +265,7 @@ section.calculator
 							type="radio",
 							value="6",
 							required)
-							| Имя маретриала
+							| Бук бавария
 							span.check__box
 
 						label.calculator-check(for="material-label--7")
@@ -99,7 +275,7 @@ section.calculator
 							type="radio",
 							value="7",
 							required)
-							| Имя маретриала
+							| Венге магия
 							span.check__box
 
 						label.calculator-check(for="material-label--8")
@@ -109,62 +285,44 @@ section.calculator
 							type="radio",
 							value="8",
 							required)
-							| Имя маретриала
+							| Черный
 							span.check__box
 
 
 
-					.calculator-frame
-						label.calculator-check
-							input.calculator-frame-item.frame-1#frame-1(
-							checked,
-							name="entry.674285196",
-							type="radio",
-							value="1",
-							required)
-							| Черный фрейм
-							span.check__box
-						label.calculator-check
-							input.calculator-frame-item.frame-2#frame-2(
-							name="entry.674285196",
-							type="radio",
-							value="2",
-							required)
-							| Белый фрейм
-							span.check__box
 
 
 
-					.calcualtor-table-sizes
-						label.calculator-check
-							input.calculator-size-item.size-1#size-1(
-							checked,
-							name="entry.756698818",
-							type="radio",
-							value="1")
-							| 100x100
-							span.check__box
-						label.calculator-check
-							input.calculator-size-item.size-2#size-2(
-							name="entry.756698818",
-							type="radio",
-							value="2")
-							| 200x200
-							span.check__box
-						label.calculator-check
-							input.calculator-size-item.size-3#size-3(
-							name="entry.756698818",
-							type="radio",
-							value="3")
-							| 300x300
-							span.check__box
-						label.calculator-check
-							input.calculator-size-item.size-4#size-4(
-							name="entry.756698818",
-							type="radio",
-							value="4")
-							| 400x400
-							span.check__box
+					//- .calcualtor-table-sizes
+					//- 	label.calculator-check
+					//- 		input.calculator-size-item.size-1#size-1(
+					//- 		checked,
+					//- 		name="entry.756698818",
+					//- 		type="radio",
+					//- 		value="1")
+					//- 		| 100x100
+					//- 		span.check__box
+					//- 	label.calculator-check
+					//- 		input.calculator-size-item.size-2#size-2(
+					//- 		name="entry.756698818",
+					//- 		type="radio",
+					//- 		value="2")
+					//- 		| 200x200
+					//- 		span.check__box
+					//- 	label.calculator-check
+					//- 		input.calculator-size-item.size-3#size-3(
+					//- 		name="entry.756698818",
+					//- 		type="radio",
+					//- 		value="3")
+					//- 		| 300x300
+					//- 		span.check__box
+					//- 	label.calculator-check
+					//- 		input.calculator-size-item.size-4#size-4(
+					//- 		name="entry.756698818",
+					//- 		type="radio",
+					//- 		value="4")
+					//- 		| 400x400
+					//- 		span.check__box
 
 
 					.calculator-phone-pop

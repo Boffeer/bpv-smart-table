@@ -16,7 +16,7 @@ html(lang="ru-RU")
 		//- link(rel="stylesheet" type='text/css' href="static/css/slick.css")
 		//- link(rel="stylesheet" type='text/css' href="static/css/slick-theme.css")
 
-		link(href="ttps://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;700&display=swap" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;700&display=swap" rel="stylesheet")
 
 		link( rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css")
 
@@ -32,7 +32,6 @@ html(lang="ru-RU")
 			include ../modules/header
 			.content
 				block content
-				include ../modules/form
 				include ../modules/harm
 				include ../modules/sport
 				include ../modules/good
@@ -40,10 +39,10 @@ html(lang="ru-RU")
 				include ../modules/stats
 				include ../modules/own
 				include ../modules/trinkets
-
-
-
 				include ../modules/calculator
+				include ../modules/form
+				include ../modules/reviews
+				include ../modules/faq
 
 
 
@@ -54,7 +53,7 @@ html(lang="ru-RU")
 		script(src="static/js/jquery.js")
 		script(src="static/js/libs.min.js")
 		script(src="static/js/main.js")
-		//- script(src="static/js/slick.min.js")
+		script(src="static/js/slick.min.js")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js")
 		script( src="https://unpkg.com/aos@next/dist/aos.js")
 		block script

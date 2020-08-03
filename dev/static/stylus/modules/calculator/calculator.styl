@@ -1,14 +1,40 @@
+.calculator
+	input
+		appearance none
+	label
+		padding 10px 26px
+	&-controls
+		max-width 704px
+		margin-left auto
+	&-controller
+		margin-bottom 26px
+	&-height
+	&-width
+	&-length
+	&-corners
+		label
+			border 3px solid #E6E6E6
+			// margin-right 20px
+		&-item
+		&-item:checked + .check__box
+			background-color clr-prim
+			color #fff
+			border-color clr-prim
+		
+
 // check
 .calculator-check
 	position relative
 
 .check__box
 	position absolute
-	width 1em
-	height 1em
-	background-color tomato
-	left -1.2em
+	width 100%
+	height 100%
+	background-color #F8F8F8
+	// left -1.2em
+	left 0
 	top 0
+	z-index -1
 
 // materials
 .calculator-materials-item
