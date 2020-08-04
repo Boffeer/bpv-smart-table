@@ -16,7 +16,7 @@ section.calculator
 					#material-8.material-img
 
 			.calculator-controls
-				iframe(
+				//- iframe(
 					id='hidden-iframe',
 					name="hidden-iframe",
 					style="display:none"
@@ -31,45 +31,46 @@ section.calculator
 
 					.calculator-height.calculator-controller
 						h3.calculator-field-name Толщина, мм
-						.calculator-height
-							label.calculator-check(for="height-label--1")
+						.calculator-inner
+							.height-container-1
 								input.calculator-height-item.height-1(
-								checked,
 								name="height",
 								id="height-label--1"
 								type="radio",
+								data-height="1",
 								value="18",
 								required)
-								| 18
-								span.check__box
+								label.calculator-check.height-label.height-label--1(for="height-label--1") 18
+								//- span.check__box-name 18
+								//- span.check__box
 
-							label.calculator-check(for="height-label--2")
-								input.calculator-height-item.height-1(
-								checked,
+							.height-container-2
+								input.calculator-height-item.height-2(
 								name="height",
 								id="height-label--2"
 								type="radio",
+								data-height="2",
 								value="36",
 								required)
-								| 36
-								span.check__box
+								label.calculator-check.height-label.height-label--2(for="height-label--2") 36
 
-							label.calculator-check(for="height-label--3")
-								input.calculator-height-item.height-1(
+							.height-container-3
+								input.calculator-height-item.height-3(
 								checked,
 								name="height",
 								id="height-label--3"
 								type="radio",
+								data-height="3",
 								value="Без столешницы",
 								required)
-								| Без столешницы
-								span.check__box
+								label.calculator-check.height-label.height-label--3(for="height-label--3") Без столешницы
+
 
 
 					.calculator-width.calculator-controller
 						h3.calculator-field-name Ширина, мм
-						.calculator-width-inner
-							label.calculator-check(for="width-label--1")
+						.calculator-inner
+							.width-container-1
 								input.calculator-width-item.width-1(
 								checked,
 								name="width",
@@ -77,45 +78,46 @@ section.calculator
 								type="radio",
 								value="750",
 								required)
-								| 750
-								span.check__box
-							label.calculator-check(for="width-label--2")
-								input.calculator-width-item.width-1(
+								label.calculator-check.width-label.width-label--1(for="width-label--1") 750
+
+							.width-container-2
+								input.calculator-width-item.width-2(
 								checked,
 								name="width",
 								id="width-label--2"
 								type="radio",
-								value="18",
+								value="800",
 								required)
-								| 800
-								span.check__box
-							label.calculator-check(for="width-label--3")
-								input.calculator-width-item.width-1(
+								label.calculator-check.width-label.width-label--2(for="width-label--2") 800
+
+							.width-container-3
+								input.calculator-width-item.width-3(
 								checked,
 								name="width",
 								id="width-label--3"
 								type="radio",
 								value="850",
 								required)
-								| 850
-								span.check__box
-							label.calculator-check(for="width-label--4")
-								input.calculator-width-item.width-1(
+								label.calculator-check.width-label.width-label--3(for="width-label--3") 850
+
+							.width-container-4
+								input.calculator-width-item.width-4(
 								checked,
 								name="width",
 								id="width-label--4"
 								type="radio",
 								value="900",
 								required)
-								| 900
-								span.check__box
+								label.calculator-check.width-label.width-label--4(for="width-label--4") 900
+
 
 
 
 					.calculator-length.calculator-controller
 						h3.calculator-field-name Длина, мм
-						.calculator-length-inner
-							label.calculator-check(for="length-label--1")
+						.calculator-inner
+
+							.label-container-1
 								input.calculator-length-item.length-1(
 								checked,
 								name="length",
@@ -123,42 +125,46 @@ section.calculator
 								type="radio",
 								value="1200",
 								required)
-								| 1200
-							label.calculator-check(for="length-label--2")
-								input.calculator-length-item.length-1(
+								label.calculator-check.length-label.length-label--1(for="length-label--1") 1200
+
+							.label-container-2
+								input.calculator-length-item.length-2(
 								checked,
 								name="length",
 								id="length-label--2"
 								type="radio",
 								value="1500",
 								required)
-								| 1500
-							label.calculator-check(for="length-label--3")
-								input.calculator-length-item.length-1(
+								label.calculator-check.length-label.length-label--2(for="length-label--2") 1500
+
+							.label-container-3
+								input.calculator-length-item.length-3(
 								checked,
 								name="length",
 								id="length-label--3"
 								type="radio",
 								value="1700",
 								required)
-								| 1700
-							label.calculator-check(for="length-label--4")
-								input.calculator-length-item.length-1(
+								label.calculator-check.length-label.length-label--3(for="length-label--3") 1700
+
+							.label-container-4
+								input.calculator-length-item.length-4(
 								checked,
 								name="length",
 								id="length-label--4"
 								type="radio",
 								value="2000",
 								required)
-								| 2000
+								label.calculator-check.length-label.length-label--4(for="length-label--4") 2000
+
 
 
 
 
 					.calculator-corners.calculator-controller
 						h3.calculator-field-name Скруглять углы?
-						.calculator-corners-inner
-							label.calculator-check(for="corners-label--1")
+						.calculator-inner
+							.corners-container-1
 								input.calculator-corners-item.corners-1(
 								checked,
 								name="corners",
@@ -166,127 +172,131 @@ section.calculator
 								type="radio",
 								value="Да",
 								required)
-								| Да
-							label.calculator-check(for="corners-label--2")
-								input.calculator-corners-item.corners-1(
+								label.calculator-check.corners-label.corners-label--1(for="corners-label--1") Да
+
+							.corners-container-2
+								input.calculator-corners-item.corners-2(
 								checked,
 								name="corners",
 								id="corners-label--2",
 								type="radio",
 								value="Нет",
 								required)
-								| Нет
+								label.calculator-check.corners-label.corners-label--2(for="corners-label--2") Нет
+
 
 
 
 					.calculator-frame.calculator-controller
 						h3.calculator-field-name Цвет механизма
-						.calculator-frame-inner
-							label.calculator-check(for="frame-label--1")
+						.calculator-inner
+							.frame-container-1
 								input.calculator-frame-item.frame-1(
 								checked,
 								name="entry.674285196",
 								id="frame-label--1",
 								type="radio",
-								value="1",
+								value="Белый",
+								data-frame="1",
 								required)
-								| Черный
-								span.check__box
+								label.calculator-check.frame-label.frame-label--1(for="frame-label--1") Белый
 
-							label.calculator-check(for="frame-label--2")
+							.frame-container-2
 								input.calculator-frame-item.frame-2(
 								name="entry.674285196",
 								id="frame-label--2",
 								type="radio",
-								value="2",
+								value="Черный",
+								data-frame="2",
 								required)
-								| Белый
-								span.check__box
+								label.calculator-check.frame-label.frame-label--2(for="frame-label--2") Черный
 
 
 
 					.calculator-materials.calculator-controller
 						h3.calculator-field-name Цвет столешницы
-						label.calculator-check(for="material-label--1")
-							input.calculator-materials-item.materal-1(
-							checked,
-							name="entry.1772279993",
-							id="material-label--1"
-							type="radio",
-							value="1",
-							required)
-							| Белый снег
-							span.check__box
+						.calculator-inner
+							.materials-container-1
+								input.calculator-materials-item.materal-1(
+								checked,
+								name="entry.1772279993",
+								id="material-label--1"
+								type="radio",
+								value="1",
+								data-material="1",
+								required)
+								label.calculator-check.materials-label.materials-label--1(for="material-label--1") Белый снег
 
-						label.calculator-check(for="material-label--2")
-							input.calculator-materials-item.materal-2(
-							name="entry.1772279993",
-							id="material-label--2"
-							type="radio",
-							value="2",
-							required)
-							| Северное дерево светлое
-							span.check__box
+							.materials-container-2
+								input.calculator-materials-item.materal-2(
+								name="entry.1772279993",
+								id="material-label--2"
+								type="radio",
+								value="2",
+								data-material="2",
+								required)
+								label.calculator-check.materials-label.materials-label--2(for="material-label--2") Северное дерево светлое
 
-						label.calculator-check(for="material-label--3")
-							input.calculator-materials-item.materal-3(
-							name="entry.1772279993",
-							id="material-label--3"
-							type="radio",
-							value="3",
-							required)
-							| Серый камень
-							span.check__box
+							.materials-container-3
+								input.calculator-materials-item.materal-3(
+								name="entry.1772279993",
+								id="material-label--3"
+								type="radio",
+								value="3",
+								data-material="3",
+								required)
+								label.calculator-check.materials-label.materials-label--3(for="material-label--3") Серый камень
 
-						label.calculator-check(for="material-label--4")
-							input.calculator-materials-item.materal-4(
-							name="entry.1772279993",
-							id="material-label--4"
-							type="radio",
-							value="4",
-							required)
-							| Дуб молочный
-							span.check__box
+							.materials-container-4
+								input.calculator-materials-item.materal-4(
+								name="entry.1772279993",
+								id="material-label--4"
+								type="radio",
+								value="4",
+								data-material="4",
+								required)
+								label.calculator-check.materials-label.materials-label--4(for="material-label--4") Дуб<br>молочный
 
-						label.calculator-check(for="material-label--5")
-							input.calculator-materials-item.materal-5(
-							name="entry.1772279993",
-							id="material-label--5"
-							type="radio",
-							value="5",
-							required)
-							| Дуб сонома
-							span.check__box
 
-						label.calculator-check(for="material-label--6")
-							input.calculator-materials-item.materal-6(
-							name="entry.1772279993",
-							id="material-label--6"
-							type="radio",
-							value="6",
-							required)
-							| Бук бавария
-							span.check__box
+							.materials-container-5
+								input.calculator-materials-item.materal-5(
+								name="entry.1772279993",
+								id="material-label--5"
+								type="radio",
+								value="5",
+								data-material="5",
+								required)
+								label.calculator-check.materials-label.materials-label--5(for="material-label--5") Дуб сонома
 
-						label.calculator-check(for="material-label--7")
-							input.calculator-materials-item.materal-7(
-							name="entry.1772279993",
-							id="material-label--7"
-							type="radio",
-							value="7",
-							required)
-							| Венге магия
-							span.check__box
+							.materials-container-6
+								input.calculator-materials-item.materal-6(
+								name="entry.1772279993",
+								id="material-label--6"
+								type="radio",
+								value="6",
+								data-material="6",
+								required)
+								label.calculator-check.materials-label.materials-label--6(for="material-label--6") Бук бавария
 
-						label.calculator-check(for="material-label--8")
-							input.calculator-materials-item.materal-8(
-							name="entry.1772279993",
-							id="material-label--8"
-							type="radio",
-							value="8",
-							required)
-							| Черный
-							span.check__box
+							.materials-container-7
+								input.calculator-materials-item.materal-7(
+								name="entry.1772279993",
+								id="material-label--7"
+								type="radio",
+								value="7",
+								data-material="7",
+								required)
+								label.calculator-check.materials-label.materials-label--7(for="material-label--7") Венге магия
+
+							.materials-container-8
+								input.calculator-materials-item.materal-8(
+								name="entry.1772279993",
+								id="material-label--8"
+								type="radio",
+								value="8",
+								data-material="8",
+								required)
+								label.calculator-check.materials-label.materials-label--8(for="material-label--8") Черный
 
 
 

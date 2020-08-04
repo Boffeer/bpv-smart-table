@@ -1,6 +1,10 @@
 .form
 	background-color clr-f
 	color #fff
+	&-title
+		color #fff
+		&__descr
+			color #fff
 	&-content
 		display flex
 		justify-content space-between
@@ -9,7 +13,8 @@
 		margin-bottom 10px
 	form
 		width 300px
-		
+
+
 		input
 			f-btn()
 			font-size 18px
@@ -17,3 +22,15 @@
 			border none
 			border-radius 12px
 			margin-bottom 16px
+
+@media (max-width 720px)
+	.form-content
+		flex-direction column
+	.form-title
+		margin-bottom 20px !important
+		&__descr
+			margin-bottom 20px
+
+	form
+		margin 0 auto
+		width 100%

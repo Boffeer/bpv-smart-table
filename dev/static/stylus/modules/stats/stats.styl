@@ -5,10 +5,21 @@
 		width 100%
 		margin-bottom 26px
 
+	&__video
+		position relative
+		width 180%
+		left -40%
+		&--1
+			left -60%
 	&-list
 		display flex
 		flex-wrap wrap
 		justify-content space-between
+.video-wrap
+	max-width 363px
+	max-height 363px
+	overflow hidden
+	margin-bottom 26px
 
 
 
@@ -20,9 +31,18 @@
 		right 0
 		top 10%
 		width 688px
+		z-index -1
 	.section-title
 		max-width 568px
 		margin 0
 		&-only-frame
 			color clr-prim
 			margin-bottom 26px
+
+
+@media (max-width 720px)
+	.only-frame
+		padding-bottom 400px
+		img
+			width 100%
+			top 55%

@@ -1,23 +1,39 @@
 .bullet__icon
-	height 160px
+	height 130px
 
 .harm
 	&-content
 		position relative
 	&-text
-		margin-bottom 38px
+		margin-bottom 164px
 		&-block
-			width 485px
+			width 545px
 	&-img
 		width 50%
 		position absolute
+		top 0
 		right -120px
-	.bullet
-		font-size 16px
-.questinon
-	f-btn()
+	.bullet__text
+		font-size 18px
 
 .harm-bullets
 	display flex
-	justify-content center
+	justify-content space-between
 	flex-wrap wrap
+
+
+@media (max-width: 720px)
+	.section-title
+		margin-bottom 42px
+	p
+		font-size 18px !important
+	.harm-text-block
+		max-width 100%
+	.harm-img
+		position relative
+		width 100%
+		right 0
+		left 0
+
+	.harm-bullets
+		justify-content center

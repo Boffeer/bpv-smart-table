@@ -1,4 +1,13 @@
 .own
+	&-text
+		p
+			max-width 400px
+			margin-bottom 42px
+	&-bullets
+		display flex
+		justify-content space-around
+		.bullet__text
+			max-width 238px
 	&-colors
 		&-list
 			display flex
@@ -37,3 +46,21 @@
 			background-image url('../img/content/9-produce/materials/7.jpg')
 		&--8
 			background-image url('../img/content/9-produce/materials/8.jpg')
+
+
+@media (max-width 720px)
+	.own-bullets
+		flex-direction column
+		align-items center
+		.bullet
+			align-items center
+			justify-content center
+
+	.own-color-item
+		width 150px
+		height 150px
+		padding 40px 20px
+		&--2
+			padding-top 20px
+		&--8
+			padding-top 60px

@@ -1,4 +1,5 @@
 .btn
+	position relative
 	padding 11px 60px
 	background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.045) 100%), #FF5726;
 	background-blend-mode: overlay, normal;
@@ -7,9 +8,25 @@
 	border none
 	color #fff
 	f-btn()
+	transition all 0.4s
+	&:hover
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(0, 0, 0, 0.085) 100%), #FF5726;
+		top 3px
+		box-shadow: 0px 2px 0px #CC3C0C;
+		transition all 0.4s
+		transition top 0.6s
 	&-secondary
 		background none
 		border 3px solid clr-prim
 		padding 11px 60px
 		border-radius: 12px;
 		color clr-f
+		&:hover
+			background-color clr-prim
+			color #fff !important
+			transition all 0.4s
+
+
+@media (max-width 720px)
+	.btn
+		margin 0 auto

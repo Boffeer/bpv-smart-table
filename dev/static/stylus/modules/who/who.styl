@@ -1,15 +1,78 @@
 .who
+	.section-title
+		text-align center
 	&-child-content
+	&-freelance-content
+	&-office-content
 		display flex
 		justify-content space-between
+		position relative
+		padding 62px 0
+
+	&-title
+		f-minititle()
+		margin-left 180px
+		// margin-bottom 62px
+
 
 	&-slider
-		width 50%
+		width 100%
 
-	&-bullets
-		f-reg()
+		&-wrap
+			width 40%
+			max-height 509px
+			position sticky
+			top 50px
+			bottom 50px
 
+.who-bullets
+	width 49%
+.who-content
 	.bullet
 		display flex
+		align-items center
+		// justify-content space-between
+		&__icon
+			margin-right 26px
 		&__text
-			width 431px
+			min-width 431px
+			f-reg()
+			text-align left
+
+
+.dots
+	li
+		display inline-block
+		width 66px
+		height 11px
+		background-color clr-prim
+
+
+@media (max-width 720px)
+	.who
+		padding-bottom 0
+		&-child-content
+		&-freelance-content
+		&-office-content
+			flex-direction column
+		&-title
+			margin-left 0
+			margin-bottom 0
+			width 100%
+			font-size 28px
+			text-align center
+		&-bullets
+			width 100%
+			align-items center
+	.who-slider-wrap
+		width 100%
+		order -1
+
+	.bullet
+		flex-direction column
+		margin-right 0 !important
+		&__icon
+			margin-right 0 !important
+		&__text
+			min-width 100% !important
+			text-align center !important

@@ -1,28 +1,39 @@
 header
-	.contianer
+	.container
 		.header-content
 			img.logo(src="", alt="")
 			.header-right
-				button.btn-secondary
+				button.btn-secondary Перезвоните мне
 				.header-phones
-					a(href="tel:375291907502") +375 29 190 75 02
-					a(href="tel:375296324077") +375 29 632 40 77
+					a(href="tel:+375291907502") +375 29 190 75 02
+					a(href="tel:+375296324077") +375 29 632 40 77
 				.burger
 					span
 					span
 					span
+	//- .burger-inner
+	//- 	a(href="") Для кого этот стол
+	//- 	a(href="") Характеристики и детали фрейма
+	//- 	a(href="") Заказать только фрейм
+	//- 	a(href="") Аксесуары
+	//- 	a(href="") Подобрать стол
+	//- 	a(href="") Отзывы
+	//- 	a(href="") Вопрос-ответ
+
 
 section.hero
+	video(loop autoplay).hero__video
+		source(src="static/hero.mp4")
 	.container
 		.hero-content
-			h1 Столы с регулируемой высотой для работы стоя|
+			h1#staticText Столы с регулируемой высотой для работы <span id="typeline">стоя|</span>
 			p.header-descriptor Повышает эффективность работы на 20% и избавляет от боли в пояснице.
 			button.btn.cta Подобрать стол
 
 section.hero-bullets
 	.container
 		.hero-bullets-content
-			+bullet('', 'Гарантия 2 года')
-			+bullet('', 'Бесплатная доставка и сборка по Минску/Минскому району в течение 3 дней')
-			+bullet('', 'Столешницы из ЛДСП любого цвета')
-			+bullet('', 'Безопасный и простой механизм,  с которым справится даже ребенок')
+			+bullet('1-hero/1', 'Гарантия 2 года')
+			+bullet('1-hero/2', 'Бесплатная доставка и сборка по Минску/Минскому району в течение 3 дней')
+			+bullet('1-hero/4', 'Столешницы из ЛДСП любого цвета')
+			+bullet('1-hero/3', 'Безопасный и простой механизм,  с которым справится даже ребенок')

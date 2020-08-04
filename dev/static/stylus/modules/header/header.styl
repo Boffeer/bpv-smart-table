@@ -1,0 +1,147 @@
+header
+	width 100%
+	position fixed
+	z-index 100
+	padding 16px 0
+	background-color #fff
+	color clr-f
+	.btn-secondary
+		color clr-f !important
+		margin-right 62px
+.header-content
+	display flex
+	justify-content space-between
+.header-right
+	display flex
+	align-items center
+
+.header-phones
+	display flex
+	flex-direction column
+	justify-content space-around
+	margin-right 62px
+	a:first-child
+		margin-bottom 10px
+
+
+.hero
+	position relative
+	height 100vh
+	padding 0
+	h1
+		font-size 50px
+		max-width 730px
+		color #fff
+	&:after
+		content ''
+		display block
+		position absolute
+		width 100vw
+		height 100vh
+		top 0
+		left 0
+		z-index 1
+		background-color rgba(0,0,0,0.68)
+	&__video
+		object-fit cover
+		position absolute
+		top 0
+		right 0
+		bottom 0
+		left 0
+		width 100vw
+		height 100vh
+		z-index 0
+
+	.header-descriptor
+		font-size 26px
+		max-width 585px
+		margin-bottom 20px
+		color #fff
+	.cta
+		padding 14px 78px
+		font-size 24px
+	.hero-content
+		margin-top 30vh
+		position relative
+		z-index 2
+
+.hero-bullets-content
+	display flex
+	justify-content space-between
+	.bullet__text
+		font-size 18px
+		max-width 80%
+		text-align center
+		margin 0 auto
+
+
+
+
+// typewriter
+
+#typeline {
+  // font-size: 2rem;
+  // line-height: 1.2;
+  color: clr-prim;
+
+}
+
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+em {
+	border-right: .15em solid clr-prim;
+	width: 20ch;
+	white-space: nowrap;
+	overflow: hidden;
+  margin-top: 0;
+  color: #3295dd;
+	-webkit-animation: typing 3s steps(21, end),
+	blink-caret .5s step-end infinite alternate;
+}
+
+// burger
+.burger
+	display flex
+	justify-content space-around
+	flex-flow column wrap
+	size(40px, 40px)
+	cursor pointer
+	span
+		display block
+		width 40px
+		height 4px
+		background-color clr-f
+	&__line
+		transition all .5s
+		display block
+		position relative
+		size(100%, 4px)
+		border-radius 4px
+	&--active > span
+		transition all .5s
+		&:first-child
+			transform rotate(45deg)
+		&:last-child
+			transform rotate(-45deg)
+			margin-top -100%
+		&:nth-child(even)
+			display none
+
+// .burger-inner
+// 	display none
+// 	z-index 100
+// 	height 100vh
+// 	width 100vw
+// 	background #f8f8f8
+// 	display flex
+// 	flex-flow column wrap
+// 	justify-content space-around
+// 	align-items center
+
+// 	padding 100px 0 180px
+// 	font-size 32px
+
+// 	transform translateY(-100vh)
+
+// .burger-inner--active
+// 	transform translateY(0)

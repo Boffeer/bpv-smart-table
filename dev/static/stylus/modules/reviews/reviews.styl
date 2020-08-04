@@ -1,4 +1,41 @@
-// 
-	// @media(max-width 736px)	
+.reviews
+	background-color #f8f8f8
+	&-slider-item
+		box-sizing content-box
+		width 100%
+		padding 51px 68px 59px
+		background-color #fff
+		border-radius 16px
+		&-wrap
+			box-sizing content-box
+			max-width 440px
+			padding 0 100px
+	&-item
+		&-profile
+			display flex
+			align-items center
+			margin-bottom 26px
+			&__name
+				f-minititle()
+			&__img
+				height 124px
+				width 124px
+				margin-right 26px
+		&-desk
+			f-btn()
 
-		
+	.slick-list
+	.draggable
+		overflow visible !important
+
+
+@media (max-width 720px)
+	.reviews-slider-item
+		max-width 100%
+		box-sizing border-box
+		padding 24px
+		background-color #f8f8f8
+		&-wrap
+			max-width 100%
+			padding 0
+			margin 0 20px 0 0

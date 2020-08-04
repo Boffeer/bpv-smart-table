@@ -1,0 +1,83 @@
+.faq
+	background-color #f8f8f8
+	&-list
+		display flex
+		flex-wrap wrap
+		justify-content space-between
+		align-items space-between
+		&-left
+		&-right
+			flex-direction column
+	&-item
+		background-color #fff
+		border-radius 16px
+		max-width 618px
+		padding 57px 68px 24px
+		margin-bottom 26px
+
+	label{
+		max-width 85%
+		position:relative;
+		display:block;
+		cursor:pointer;
+		f-btn()
+	}
+
+	label:after
+		content:url('../img/content/angle.png');
+		position:absolute;
+		display:block;
+		top 0
+		right -20%
+		transition: transform .3s
+
+	input:checked ~ label:after{
+		border-top:0 solid rgba(255,255,255,.5);
+		border-bottom:4px solid rgba(255,255,255,.5);
+		transition:border-top .1s, border-bottom .1s .1s;
+		transition: transform .3s
+		transform rotate(180deg)
+
+	}
+	/*hide the inputs*/
+	input[name='FAQ']{display:none}
+
+	/*show the second levele menu of the selected voice*/
+	input:checked ~ .faq-submenu{
+		margin-top 26px
+		padding-bottom 26px
+		// margin-bottom 57px
+		max-height 500px
+		transition: all 0.5s ease-in;
+	}
+
+	/*style for the second level menu*/
+	.faq-submenu{
+		max-height:0;
+		margin-top 32px
+		padding:0;
+		overflow:hidden;
+		transition: all  0.5s ease-out;
+		// position:absolute;
+		// min-width:482px
+		max-width:482px;
+	}
+
+	// .faq-submenu li a{
+	// 	display:block;
+	// 	padding:12px;
+	// 	color:#ddd;
+	// 	text-decoration:none;
+	// 	box-shadow:0 -1px rgba(0,0,0,.5) inset;
+	// 	transition:background .3s;
+	// 	white-space:nowrap;
+	// }
+
+	// .faq-submenu li a:hover{
+	// 	background:rgba(0,0,0,.3);
+	// }
+
+
+	@media (max-width 720px)
+		.faq-item
+			padding 37px 38px 14px

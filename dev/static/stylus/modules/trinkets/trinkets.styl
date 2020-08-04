@@ -1,7 +1,9 @@
 .trinket-item
 	max-width 354px
+	padding 0 32px
 	img
 		width 100%
+		margin-bottom 20px
 	.trinket-feature
 		f-btn()
 	.trinket-title
@@ -9,3 +11,39 @@
 		margin-bottom 20px
 	.trinket-descr
 		margin-bottom 20px
+	.trinket-btn
+		margin-top 20px
+
+
+.slick-arrow
+	top -85px !important
+	width 64px !important
+	height 64px !important
+	&:before
+		font-size 48px !important
+		color clr-prim !important
+.slick-prev
+		left 80% !important
+		right 0 !important
+.slick-next
+	right 10% !important
+
+
+.trinkets
+	.slick-list
+	.draggable
+		overflow visible !important
+
+
+@media (max-width 720px)
+	.slick-arrow
+		z-index 10
+		top 50% !important
+	.slick-prev
+		left -5% !important
+	.slick-next
+		right -5% !important
+	.trinket-btn
+		padding 20px 55px
+	.trinket-item
+		padding 0 16px

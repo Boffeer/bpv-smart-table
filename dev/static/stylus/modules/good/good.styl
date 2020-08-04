@@ -1,8 +1,14 @@
+.good
+	background-color #f8f8f8
+
 .good-facts
 	display flex
 	justify-content space-between
+	margin-bottom 124px
 .good__fact
-	max-width 400px
+	max-width 420px
+	&:last-child
+		max-width 600px
 
 .get-up-bullets
 	max-width 1074px
@@ -12,3 +18,21 @@
 	flex-wrap wrap
 	.bullet
 		max-width 336px
+
+.question
+	f-btn()
+	max-width 450px
+	margin-bottom 42px
+
+
+@media (max-width 720px)
+	.good
+		padding-bottom 0
+	.good-facts
+		flex-direction column
+	.good__fact
+		max-width 100%
+		margin-bottom 42px
+
+	.get-up-bullets
+		justify-content center

@@ -1,0 +1,67 @@
+.sport
+	max-height 972px
+	overflow hidden
+	&-content
+		position relative
+	&-text
+		padding-top 42px
+		max-width 577px
+		margin-left auto
+
+.sportsman
+	position absolute
+	left 0
+	top 0px
+	transform scale(-1, 1)
+
+.sport-title
+	f-title()
+	background-color #f0f0f0
+	padding 25px 38px
+	max-width 605px
+	border-radius 28px 28px 28px 0
+	position relative
+	margin-left 25%
+	&:after
+		position absolute
+		left -32px
+		bottom -32px
+		box-sizing border-box
+		content ''
+		border: 32px solid transparent; border-top: 32px solid #f0f0f0;
+		transform rotate(-45deg)
+
+.sport-text
+	&__title
+		f-btn()
+		margin-bottom 32px
+	&__descr
+		margin-bottom 32px
+
+
+@media (max-width 720px)
+	.sport
+		background-color #f8f8f8
+		padding-bottom 700px
+		&-content
+			position relative
+	.section-title
+		font-size 32px
+	.sport-title
+		font-size 22px
+	.sport-text
+		width 100vw
+		position absolute
+		top 400px
+		// bottom 0
+		left 0
+		right 0
+		z-index 2
+		background-color #f8f8f8
+		padding 42px  25px
+		&__descr
+			margin 0
+			padding-bottom 25px
+	.sportsman
+		z-index 0
+		left -200px
