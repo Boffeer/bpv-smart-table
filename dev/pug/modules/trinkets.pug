@@ -1,4 +1,4 @@
-section.trinkets
+section.trinkets#trinkets
 	.container
 		.trinkets-content
 			h2.section-title Аксесуары
@@ -11,3 +11,43 @@ section.trinkets
 					+trinket('4', '4', 'Заглушка для проводов ', 'Прячет ненужные провода и крепится в столешницу', '10', 'Диаметр: 60 мм', 'Материал: пластик')
 					+trinket('5', '5', 'Лоток для проводов', 'Крепится под стол и служит для сбора проводов в одном месте', '45', 'Размер: 850*90*80 мм', 'Материал: металл')
 					+trinket('6', '6', 'Удлинитель вертикальный с USB', 'Не нужно лазить под столом, чтобы подключить продвода — теперь всё под рукой', '145', 'Цвета: черный и серебристый', 'Материал: металл + пластик')
+
+
+				form(
+					action='static/php/trinkets.php'
+					method='POST').trinkets-phone-pop-wrap.phone-pop-wrap
+						.trinkets-phone-pop.phone-pop
+							span.close-phone-pop X
+							p.trinkets-pop-name <span class="trinket-name"></span> за <span class="trinket-cost"></span> руб.
+							input(
+								name="trinketName"
+								type="text"
+							).trinket-name__input
+							input(
+								name="cost"
+								type="text"
+							).trinket-cost__input
+							input(
+								name="name"
+								type="text"
+								placeholder='Имя'
+								required
+							)
+							input(
+								name="tel",
+								type="tel",
+								placeholder="Телефон"
+								autocorrect="off"
+								autocomplete="tel"
+								required)
+							input(
+								name="address"
+								type="text"
+								placeholder='Адрес проживания'
+								autocorrect="off"
+								autocomplete="address-line1"
+								required
+							)
+							input.btn.trinkets-submit(
+								type="submit"
+								value="Закзать")

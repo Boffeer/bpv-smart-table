@@ -1,60 +1,56 @@
-section.calculator
+section.calculator#calcualtor
 	.container
+		h2.section-title Выберите стол для себя или близких
 		.calculator-content
-			.calculator-img
-				.calculator-img-frame
-					#frame-1.frame-img
-					#frame-2.frame-img
-				.calculator-img-materials
-					#material-1.material-img
-					#material-2.material-img
-					#material-3.material-img
-					#material-4.material-img
-					#material-5.material-img
-					#material-6.material-img
-					#material-7.material-img
-					#material-8.material-img
+			.calculator-img-wrap
+				.calculator-cost-dubler
+				.calculator-img
+					.calculator-img-frame
+						#frame-1.frame-img
+						#frame-2.frame-img
+					.calculator-img-materials
+						#material-1.material-img
+						#material-2.material-img
+						#material-3.material-img
+						#material-4.material-img
+						#material-5.material-img
+						#material-6.material-img
+						#material-7.material-img
+						#material-8.material-img
 
 			.calculator-controls
-				//- iframe(
-					id='hidden-iframe',
-					name="hidden-iframe",
-					style="display:none"
-					onload="if(costSubmitted){window.location='https://vk.com';}")
 
 				form.calculator-form(
-					action='https://docs.google.com/forms/u/0/d/e/1FAIpQLSc9KCxTnYm1cmeCFQ3FRL9KPFq-WjmWf8vGzswMZaaHjspeYQ/formResponse',
-					method='POST',
-					target='hidden-iframe',
-					onsubmit='costSubmitted=true;'
+					action='static/php/contact.php'
+					method='POST'
 				)
 
 					.calculator-height.calculator-controller
 						h3.calculator-field-name Толщина, мм
 						.calculator-inner
-							.height-container-1
+							.label-container
 								input.calculator-height-item.height-1(
 								name="height",
 								id="height-label--1"
 								type="radio",
 								data-height="1",
 								value="18",
-								required)
+								)
 								label.calculator-check.height-label.height-label--1(for="height-label--1") 18
 								//- span.check__box-name 18
 								//- span.check__box
 
-							.height-container-2
+							.label-container
 								input.calculator-height-item.height-2(
 								name="height",
 								id="height-label--2"
 								type="radio",
 								data-height="2",
 								value="36",
-								required)
+								)
 								label.calculator-check.height-label.height-label--2(for="height-label--2") 36
 
-							.height-container-3
+							.label-container
 								input.calculator-height-item.height-3(
 								checked,
 								name="height",
@@ -62,7 +58,7 @@ section.calculator
 								type="radio",
 								data-height="3",
 								value="Без столешницы",
-								required)
+								)
 								label.calculator-check.height-label.height-label--3(for="height-label--3") Без столешницы
 
 
@@ -70,44 +66,48 @@ section.calculator
 					.calculator-width.calculator-controller
 						h3.calculator-field-name Ширина, мм
 						.calculator-inner
-							.width-container-1
+							.label-container
 								input.calculator-width-item.width-1(
-								checked,
+								disabled
 								name="width",
+								data-width="1"
 								id="width-label--1"
 								type="radio",
 								value="750",
-								required)
+								)
 								label.calculator-check.width-label.width-label--1(for="width-label--1") 750
 
-							.width-container-2
+							.label-container
 								input.calculator-width-item.width-2(
-								checked,
+								disabled
 								name="width",
+								data-width="2"
 								id="width-label--2"
 								type="radio",
 								value="800",
-								required)
+								)
 								label.calculator-check.width-label.width-label--2(for="width-label--2") 800
 
-							.width-container-3
+							.label-container
 								input.calculator-width-item.width-3(
-								checked,
+								disabled
 								name="width",
+								data-width="3"
 								id="width-label--3"
 								type="radio",
 								value="850",
-								required)
+								)
 								label.calculator-check.width-label.width-label--3(for="width-label--3") 850
 
-							.width-container-4
+							.label-container
 								input.calculator-width-item.width-4(
-								checked,
+								disabled
 								name="width",
+								data-width="4"
 								id="width-label--4"
 								type="radio",
 								value="900",
-								required)
+								)
 								label.calculator-check.width-label.width-label--4(for="width-label--4") 900
 
 
@@ -117,44 +117,48 @@ section.calculator
 						h3.calculator-field-name Длина, мм
 						.calculator-inner
 
-							.label-container-1
+							.label-container
 								input.calculator-length-item.length-1(
-								checked,
+								disabled
 								name="length",
+								data-length="1"
 								id="length-label--1"
 								type="radio",
 								value="1200",
-								required)
+								)
 								label.calculator-check.length-label.length-label--1(for="length-label--1") 1200
 
-							.label-container-2
+							.label-container
 								input.calculator-length-item.length-2(
-								checked,
+								disabled
 								name="length",
+								data-length="2"
 								id="length-label--2"
 								type="radio",
 								value="1500",
-								required)
+								)
 								label.calculator-check.length-label.length-label--2(for="length-label--2") 1500
 
-							.label-container-3
+							.label-container
 								input.calculator-length-item.length-3(
-								checked,
+								disabled
 								name="length",
+								data-length="3"
 								id="length-label--3"
 								type="radio",
 								value="1700",
-								required)
+								)
 								label.calculator-check.length-label.length-label--3(for="length-label--3") 1700
 
-							.label-container-4
+							.label-container
 								input.calculator-length-item.length-4(
-								checked,
+								disabled
 								name="length",
+								data-length="4"
 								id="length-label--4"
 								type="radio",
 								value="2000",
-								required)
+								)
 								label.calculator-check.length-label.length-label--4(for="length-label--4") 2000
 
 
@@ -164,24 +168,26 @@ section.calculator
 					.calculator-corners.calculator-controller
 						h3.calculator-field-name Скруглять углы?
 						.calculator-inner
-							.corners-container-1
+							.label-container
 								input.calculator-corners-item.corners-1(
-								checked,
+								disabled,
 								name="corners",
+								data-corners="1"
 								id="corners-label--1",
 								type="radio",
 								value="Да",
-								required)
+								)
 								label.calculator-check.corners-label.corners-label--1(for="corners-label--1") Да
 
-							.corners-container-2
+							.label-container
 								input.calculator-corners-item.corners-2(
-								checked,
+								disabled
 								name="corners",
+								data-corners="2"
 								id="corners-label--2",
 								type="radio",
 								value="Нет",
-								required)
+								)
 								label.calculator-check.corners-label.corners-label--2(for="corners-label--2") Нет
 
 
@@ -190,20 +196,20 @@ section.calculator
 					.calculator-frame.calculator-controller
 						h3.calculator-field-name Цвет механизма
 						.calculator-inner
-							.frame-container-1
+							.label-container
 								input.calculator-frame-item.frame-1(
 								checked,
-								name="entry.674285196",
+								name="frame",
 								id="frame-label--1",
 								type="radio",
 								value="Белый",
 								data-frame="1",
-								required)
+								)
 								label.calculator-check.frame-label.frame-label--1(for="frame-label--1") Белый
 
-							.frame-container-2
+							.label-container
 								input.calculator-frame-item.frame-2(
-								name="entry.674285196",
+								name="frame",
 								id="frame-label--2",
 								type="radio",
 								value="Черный",
@@ -215,87 +221,86 @@ section.calculator
 
 					.calculator-materials.calculator-controller
 						h3.calculator-field-name Цвет столешницы
-						.calculator-inner
+						.calculator-inner.materials-inner
 							.materials-container-1
 								input.calculator-materials-item.materal-1(
-								checked,
-								name="entry.1772279993",
+								name="material",
 								id="material-label--1"
 								type="radio",
-								value="1",
 								data-material="1",
-								required)
+
+								value="Белый снег")
 								label.calculator-check.materials-label.materials-label--1(for="material-label--1") Белый снег
 
 							.materials-container-2
 								input.calculator-materials-item.materal-2(
-								name="entry.1772279993",
+								name="material",
 								id="material-label--2"
 								type="radio",
-								value="2",
 								data-material="2",
-								required)
+
+								value="Северное дерево светлое")
 								label.calculator-check.materials-label.materials-label--2(for="material-label--2") Северное дерево светлое
 
 							.materials-container-3
 								input.calculator-materials-item.materal-3(
-								name="entry.1772279993",
+								name="material",
 								id="material-label--3"
 								type="radio",
-								value="3",
 								data-material="3",
-								required)
+
+								value="Серый камень")
 								label.calculator-check.materials-label.materials-label--3(for="material-label--3") Серый камень
 
 							.materials-container-4
 								input.calculator-materials-item.materal-4(
-								name="entry.1772279993",
+								name="material",
 								id="material-label--4"
 								type="radio",
-								value="4",
 								data-material="4",
-								required)
-								label.calculator-check.materials-label.materials-label--4(for="material-label--4") Дуб<br>молочный
+
+								value="Дуб молочный")
+								label.calculator-check.materials-label.materials-label--4(for="material-label--4") Дуб молочный
 
 
 							.materials-container-5
 								input.calculator-materials-item.materal-5(
-								name="entry.1772279993",
+								name="material",
 								id="material-label--5"
 								type="radio",
-								value="5",
 								data-material="5",
-								required)
+
+								value="Дуб сонома")
 								label.calculator-check.materials-label.materials-label--5(for="material-label--5") Дуб сонома
 
 							.materials-container-6
 								input.calculator-materials-item.materal-6(
-								name="entry.1772279993",
+								name="material",
 								id="material-label--6"
 								type="radio",
-								value="6",
 								data-material="6",
-								required)
-								label.calculator-check.materials-label.materials-label--6(for="material-label--6") Бук бавария
+
+								value="Бук Бавария")
+								label.calculator-check.materials-label.materials-label--6(for="material-label--6") Бук Бавария
 
 							.materials-container-7
 								input.calculator-materials-item.materal-7(
-								name="entry.1772279993",
+								name="entry.262376598",
 								id="material-label--7"
 								type="radio",
-								value="7",
 								data-material="7",
-								required)
+
+								value="Венге магия")
 								label.calculator-check.materials-label.materials-label--7(for="material-label--7") Венге магия
 
 							.materials-container-8
 								input.calculator-materials-item.materal-8(
-								name="entry.1772279993",
+								name="material",
 								id="material-label--8"
 								type="radio",
-								value="8",
 								data-material="8",
-								required)
+
+								value="Черный")
 								label.calculator-check.materials-label.materials-label--8(for="material-label--8") Черный
 
 
@@ -335,15 +340,38 @@ section.calculator
 					//- 		span.check__box
 
 
-					.calculator-phone-pop
-						input(
-							name="entry.875101439",
-							type="tel",
-							required)#phone-id
-					.calculator-cost Ваша цена
-						input(
-							name="entry.1706720507"
-							type="text"
-							disabled
-							value="111").calculator-cost__info
-						button.btn.calculator-submit(type="submit") Заказать
+					.phone-pop-wrap.calculator-phone-pop-wrap
+						.phone-pop
+							span.close-phone-pop X
+							input(
+								name="name"
+								type="text"
+								placeholder='Имя'
+								required
+							).calculator-name
+							input(
+								name="tel",
+								type="tel",
+								placeholder="Телефон"
+								autocorrect="off"
+								autocomplete="tel"
+								required)#phone-id.calculator-phone
+							input(
+								name="address"
+								type="text"
+								placeholder='Адрес проживания'
+								autocorrect="off"
+								autocomplete="address-line1"
+								required
+							).calculator-address
+							input.btn.calculator-submit(
+								type="submit"
+								value="Отправить")
+					.calculator-cost-wrap
+						.calculator-cost
+							input(
+								name="calculatorCost"
+								type="text"
+								disabled
+								value="930").calculator-cost__info
+						button.btn.calculator-pop-open(type="button") Заказать

@@ -4,19 +4,21 @@ section.form
 			.form-text
 				h2.section-title.form-title Если нет нужного цвета и формы столешницы, то оставьте заявку на индивидуальный заказ.
 				p.form-title__descr Мы с удовольствием сделаем то, что вам нужно.
-			form(action="")
+			form(action="static/php/form.php")
 				input(
 					type="text"
-					name="a"
+					name="name"
 					id="name"
 					placeholder="Имя"
 					required)
 				input(
 					type="tel"
-					name="b"
+					name="tel"
 					id="phone"
 					placeholder="Номер телефона"
+					autocorrect="off"
+					autocomplete="tel"
 					required)
-				input.btn(
+				input.btn.form-btn(
 					type="submit"
 					value="Отправить")

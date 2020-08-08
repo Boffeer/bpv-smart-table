@@ -1,9 +1,9 @@
-header
+header.header
 	.container
 		.header-content
 			img.logo(src="", alt="")
 			.header-right
-				button.btn-secondary Перезвоните мне
+				button.btn-secondary.callback-btn Перезвоните мне
 				.header-phones
 					a(href="tel:+375291907502") +375 29 190 75 02
 					a(href="tel:+375296324077") +375 29 632 40 77
@@ -11,14 +11,35 @@ header
 					span
 					span
 					span
-	//- .burger-inner
-	//- 	a(href="") Для кого этот стол
-	//- 	a(href="") Характеристики и детали фрейма
-	//- 	a(href="") Заказать только фрейм
-	//- 	a(href="") Аксесуары
-	//- 	a(href="") Подобрать стол
-	//- 	a(href="") Отзывы
-	//- 	a(href="") Вопрос-ответ
+
+.callback-form-wrap
+	form.callback-form(
+		action=""
+	)
+		span.close-phone-pop X
+		p.callback-message.note Оставьте свой телефон и мы перезвоним вам
+		input(
+			name="tel",
+			type="tel",
+			placeholder="Телефон"
+			autocorrect="off"
+			autocomplete="tel"
+			required
+		).callback-phone-field
+		input(type="submit" value="Отправить").callback-send.btn
+
+
+.burger-inner-wrap
+	.burger-inner
+		a(href="#who").burger-link Для кого этот стол
+		a(href="#stats").burger-link Характеристики и детали фрейма
+		a(href="#only-frame").burger-link Заказать только фрейм
+		a(href="#trinkets").burger-link Аксесуары
+		a(href="#calculator").burger-link Подобрать стол
+		a(href="#reviews").burger-link Отзывы
+		a(href="#faq").last-.burger-link Вопрос-ответ
+
+		button.btn-secondary.burger-btn.callback-btn Перезвоните мне
 
 
 section.hero
@@ -28,7 +49,7 @@ section.hero
 		.hero-content
 			h1#staticText Столы с регулируемой высотой для работы <span id="typeline">стоя|</span>
 			p.header-descriptor Повышает эффективность работы на 20% и избавляет от боли в пояснице.
-			button.btn.cta Подобрать стол
+			a(href="#calcualtor").btn.cta Подобрать стол
 
 section.hero-bullets
 	.container

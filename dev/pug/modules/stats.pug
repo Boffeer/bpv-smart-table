@@ -1,4 +1,4 @@
-section.stats
+section.stats#stats
 	.container
 		.stats-content
 			h2.section-title Характеристики и детали фрейма
@@ -23,8 +23,10 @@ section.stats
 				//- 			source(src="static/9.mp4")
 				//- 	p.stat__text Плавный подъем/спуск со скоростью  3.8 см/с. Ваш кофе на столе не прольётся, а рабочее положение вы сменеите в течение 20 секунд
 
-		.only-frame
+		.only-frame#only-frame
 			h2.section-title Есть столешница с которой не хотите расставаться, но нужен фрейм?
 			h2.section-title.section-title-only-frame Вы можете заказать его отдельно в белом или черном цвете
 			button.btn Заказать фрейм
-			img(src="static/img/content/8-only-frame/frame.jpg", alt="frame")
+			.only-frame__pic
+				span.only-frame__cost 930 руб.
+				img(src="static/img/content/8-only-frame/frame.jpg", alt="frame")

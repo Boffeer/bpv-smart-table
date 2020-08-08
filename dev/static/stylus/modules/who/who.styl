@@ -17,6 +17,8 @@
 
 	&-slider
 		width 100%
+		img
+			object-fit cover !important
 
 		&-wrap
 			width 40%
@@ -24,6 +26,9 @@
 			position sticky
 			top 50px
 			bottom 50px
+
+.slick-slide
+	height 100% !important
 
 .who-bullets
 	width 49%
@@ -41,20 +46,27 @@
 
 
 .dots
+	display flex !important
+	justify-content center
+	padding-top 25px
 	li
 		display inline-block
+		border-radius 4px
 		width 66px
 		height 11px
 		background-color clr-prim
-
+		margin-right 20px
+		opacity 0.5
+		button[role="tab"]
+			opacity 0
+		&:hover
+			opacity 0.8
+			cursor pointer
+	li.slick-active
+		opacity 1
 
 @media (max-width 720px)
 	.who
-		padding-bottom 0
-		&-child-content
-		&-freelance-content
-		&-office-content
-			flex-direction column
 		&-title
 			margin-left 0
 			margin-bottom 0
@@ -64,15 +76,35 @@
 		&-bullets
 			width 100%
 			align-items center
+			justify-content center
+			position relative
+			right 0
+			left 0
 	.who-slider-wrap
 		width 100%
 		order -1
 
 	.bullet
+		position relative
 		flex-direction column
-		margin-right 0 !important
+		margin 0 30px 62px
 		&__icon
 			margin-right 0 !important
 		&__text
 			min-width 100% !important
 			text-align center !important
+
+@media (max-width ipadS)
+	.who
+		padding-bottom 0
+		&-child-content
+		&-freelance-content
+		&-office-content
+			flex-direction column
+		&-office-content
+			padding-bottom 0
+	.who-slider-wrap
+		position static
+		width 100%
+		order -1
+		margin-bottom 144px

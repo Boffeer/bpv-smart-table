@@ -5,7 +5,12 @@ mixin icon(name,mod)
 
 
 mixin bullet(path, text)
-	.bullet
+	.bullet(
+		data-aos="fade-up"
+		data-aos-duration="500"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="false")
 		img(src="static/img/content/"+path+'.png').bullet__icon
 		p.bullet__text= text
 
@@ -22,4 +27,6 @@ mixin trinket(trinketNumber, img, title, descr, cost, feature1, feature2, featur
 		p.trinket-feature= feature1
 		p.trinket-feature= feature2
 		p.trinket-feature= feature3
-		button.trinket-btn.btn-secondary(class="trinket-"+trinketNumber) Цена #{cost} руб.
+		button.trinket-btn.btn-secondary(
+			data-trinket-cost= trinketNumber
+			data-trinket= title) Цена #{cost} руб.

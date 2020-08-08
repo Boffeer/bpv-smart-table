@@ -11,7 +11,7 @@
 .sportsman
 	position absolute
 	left 0
-	top 0px
+	top 80px
 	transform scale(-1, 1)
 
 .sport-title
@@ -42,7 +42,7 @@
 @media (max-width 720px)
 	.sport
 		background-color #f8f8f8
-		padding-bottom 700px
+		padding-bottom 700px !important
 		&-content
 			position relative
 	.section-title
@@ -64,4 +64,17 @@
 			padding-bottom 25px
 	.sportsman
 		z-index 0
-		left -200px
+		left -210px
+		top 20px
+
+@media (max-width ipadS)
+	.sport
+		padding-bottom 0
+	.sportsman
+		left -210px
+	.sport-title
+		margin-left 15%
+	.sport-text
+		background-color #f8f8f8
+		padding 42px
+

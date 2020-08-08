@@ -2,6 +2,7 @@
 	&-content
 		display flex
 		justify-content space-between
+		padding 68px 0
 		f-reg()
 	&-links
 		display flex
@@ -15,4 +16,28 @@
 		a
 			display block
 	.callback
-		margin-bottom 26px
+		margin-bottom 42px
+
+	&-policy
+		font-size 16px
+	&-phones
+		margin-bottom 42px
+
+.map
+	width 700px
+	*
+		width 100%
+		height 400px
+
+
+@media (max-width 720px)
+	.footer-content
+		text-align center
+		flex-direction column
+		.callback
+			margin 0 auto 42px
+
+@media (max-width ipadS)
+	.map
+		width 400px !important
+

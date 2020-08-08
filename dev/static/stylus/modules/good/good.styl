@@ -11,13 +11,14 @@
 		max-width 600px
 
 .get-up-bullets
+	margin 0 auto
 	max-width 1074px
 	display flex
-	justify-content space-between
+	justify-content center
 	align-items flex-start
 	flex-wrap wrap
 	.bullet
-		max-width 336px
+		width 336px
 
 .question
 	f-btn()
@@ -26,13 +27,19 @@
 
 
 @media (max-width 720px)
-	.good
-		padding-bottom 0
-	.good-facts
-		flex-direction column
 	.good__fact
 		max-width 100%
 		margin-bottom 42px
 
 	.get-up-bullets
 		justify-content center
+
+
+@media(max-width ipadS)
+	.good
+		padding-bottom 0
+	.good-facts
+		flex-direction column
+		margin-bottom 62px
+	.good__fact
+		max-width 80%

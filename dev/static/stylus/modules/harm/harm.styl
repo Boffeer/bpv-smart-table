@@ -10,9 +10,12 @@
 			width 545px
 	&-img
 		width 50%
+		height 350px
 		position absolute
 		top 0
-		right -120px
+		right 0
+		background-image url('../img/content/2-harm/desktop.jpg')
+		background-size cover
 	.bullet__text
 		font-size 18px
 
@@ -37,3 +40,29 @@
 
 	.harm-bullets
 		justify-content center
+
+
+@media (max-width 766px)
+	.harm-content
+		display flex
+		flex-wrap wrap
+	.harm-text
+		margin-bottom 62px
+	.harm-img
+		margin-bottom 62px
+		width 100%
+		height 100vh
+		order 2
+		background-size cover !important
+		background-image url('../img/content/2-harm/mobile.jpg') !important
+
+@media (max-width ipadS)
+	.harm-text
+		margin-bottom 32px
+	.harm-img
+		position relative
+		width 100%
+		background-size contain
+		background-position center center
+		background-repeat no-repeat
+		margin-bottom 42px

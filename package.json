@@ -28,7 +28,8 @@
     "gulp-svgmin": "^2.2.0",
     "gulp-tinypng": "^1.0.2",
     "gulp-uglifyjs": "^0.6.2",
-    "gulp-uncss": "^1.0.6"
+    "gulp-uncss": "^1.0.6",
+    "stickybits": "^3.7.7"
   },
   "dependencies": {
     "aos": "^3.0.0-beta.6",
