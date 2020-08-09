@@ -11,22 +11,59 @@ section.stats#stats
 				+stat('5', 'Общий вес 30 кг. Стол не будет шататься даже, если вы подымите его на максимальную высоту и сядете сверху')
 				+stat('6', 'Система защиты от случайных нажатий поможет вам спокойно работать, даже если вы рукой или коленкой по контроллеру')
 
-				//- .stat
-				//- 	.video-wrap
-				//- 		video(loop autoplay).stat__video.stat__video--1
-				//- 			source(src="static/7.mp4")
-				//- 	p.stat__text Система антистолкновения. Обезапасит вас и вашего ребенка от зажатий
+				.stat
+					.video-wrap
+						video(loop autoplay).stat__video.stat__video--1
+							source(src="static/7.mp4")
+					p.stat__text Система антистолкновения. Обезапасит вас и вашего ребенка от зажатий
 				+stat('8', 'Диапазон длины фреймаот 110 до 180 см позволяет установить столешницу от 120 до 200 см')
-				//- .stat
-				//- 	.video-wrap
-				//- 		video(loop autoplay).stat__video
-				//- 			source(src="static/9.mp4")
-				//- 	p.stat__text Плавный подъем/спуск со скоростью  3.8 см/с. Ваш кофе на столе не прольётся, а рабочее положение вы сменеите в течение 20 секунд
+				.stat
+					.video-wrap
+						video(loop autoplay).stat__video
+							source(src="static/9.mp4")
+					p.stat__text Плавный подъем/спуск со скоростью  3.8 см/с. Ваш кофе на столе не прольётся, а рабочее положение вы сменеите в течение 20 секунд
 
 		.only-frame#only-frame
 			h2.section-title Есть столешница с которой не хотите расставаться, но нужен фрейм?
 			h2.section-title.section-title-only-frame Вы можете заказать его отдельно в белом или черном цвете
-			button.btn Заказать фрейм
+			button.btn.only-frame-btn Заказать фрейм
 			.only-frame__pic
 				span.only-frame__cost 930 руб.
 				img(src="static/img/content/8-only-frame/frame.jpg", alt="frame")
+
+
+		.phone-pop-wrap.only-frame-phone-pop-wrap
+			form(action="static/php/only-frame.php").phone-pop
+				span.close-phone-pop X
+				p Выберите цвет фрейа
+				input(
+					name="name"
+					type="text"
+					placeholder='Имя'
+					required
+				).only-frame-name
+				input(
+					name="tel",
+					type="tel",
+					placeholder="Телефон"
+					autocorrect="off"
+					autocomplete="tel"
+					required)#phone-id.only-frame-phone
+				input(
+					name="address"
+					type="text"
+					placeholder='Адрес проживания'
+					autocorrect="off"
+					autocomplete="address-line1"
+					required
+				).only-frame-address
+				.only-frame-color-picker
+					.white
+						input#only-frame--white(type="radio", name="frame" value="Белый").only-frame__radio.only-frame__radio--white
+						label(for="only-frame--white").only-frame-color-label.only-frame-color-label--white Белый
+					.black
+						input#only-frame--black(type="radio", name="frame" value="Черный").only-frame__radio.only-frame__radio--black
+						label(for="only-frame--black").only-frame-color-label.only-frame-color-label--black Черный
+				input.btn.only-frame-submit(
+					type="submit"
+					value="Заказать")

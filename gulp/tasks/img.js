@@ -12,7 +12,7 @@ module.exports = function() {
 
 
     $.gulp.task('svg:copy', () => {
-        return $.gulp.src('./dev/static/img/general/*.svg')
+        return $.gulp.src('./dev/static/img/general/**/*.svg')
             .pipe($.gulp.dest('./build/static/img/general/'));
     });
 };

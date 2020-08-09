@@ -12,8 +12,7 @@ $name = htmlspecialchars($_POST['name']);
 $tel = htmlspecialchars($_POST["tel"]);
 $address = htmlspecialchars($_POST["address"]);
 
-$trinketName = htmlspecialchars($_POST["trinketName"]);
-$cost = htmlspecialchars($_POST["cost"]);
+$frame = htmlspecialchars($_POST["frame"]);
 
 $mail = new PHPMailer;
 $mail->CharSet = 'UTF-8';
@@ -29,17 +28,17 @@ $mail->Username = 'boffeerleads@gmail.com';
 $mail->Password = 'Bo8612241142ds';
 
 // От кого
-$mail->setFrom('boffeerleads@gmail.com', 'Заказ на аксесуар');
+$mail->setFrom('boffeerleads@gmail.com', 'Заказ только фрейм');
 
 // Кому
 $mail->addAddress('boffeerleads@gmail.com', 'Принмающий лиды');
 
 // Тема письма
-$mail->Subject = 'Смарт столы, лид с квиза';
+$mail->Subject = 'Смарт столы, только фрейм';
 
 // Тело письма
 
-$body = "Цена: ".$cost."<br>Имя: ".$name."<br>Телефон: " .$tel."<br>Адрес: ".$address."<br>Аксессуар: ".$tirnketName;
+$body = "Цена: "<br>Имя: ".$name."<br>Телефон: " .$tel."<br>Адрес: ".$address."<br>Фрейм: ".$frame;
 $mail->msgHTML($body);
 
 // Приложение

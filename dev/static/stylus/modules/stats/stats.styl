@@ -26,11 +26,20 @@
 .only-frame
 	padding 100px 0 150px
 	position relative
+	&-phone-pop-wrap
+		.phone-pop
+			height 	55% 
+			max-height 	400px 
+		p
+			margin-bottom 26px	
+			text-align center
 	&__cost
 		position absolute
 		right 15vw
 		font-size 32px
 		font-weight 700
+	&__pic
+		z-index -1 
 	img
 		position absolute
 		right 0
@@ -52,12 +61,35 @@
 			color clr-prim
 			margin-bottom 26px
 
+.only-frame__radio
+	display none !important
+	
+.only-frame__radio:checked ~ .only-frame-color-label
+	border 3px solid clr-prim
+.only-frame-color-picker
+	display flex	
+	-webkit-justify-content space-between
+	justify-content space-between	
+	margin-bottom 36px	
+	padding-top 24px
+	
+.only-frame-color-label
+	padding 16px 48px 12px
+	border-radius 12px
+	&--white
+		border 2px solid #f7f7f7
+	&--black
+		background-color #232323 
+		border 2px solid #232323
+		color #fff
+.only-frame-submit
+	width 100%
 
 @media (max-width 720px)
 	.stat-list
 		justify-content center
 	.only-frame
-		padding-bottom 400px
+		padding-bottom 400px 
 		.btn
 			display block
 			width 300px
@@ -91,3 +123,4 @@
 			top -150px
 		&__cost
 			left 40%
+			

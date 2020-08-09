@@ -24,4 +24,11 @@ module.exports = function() {
             }))
             .pipe($.gulp.dest('./build/static/img/svg/'));
     });
+
+    // gulp.task('svgs', () => {
+        
+    // return gulp.src('./dev/static/img/**/*.svg')
+    //     .pipe(svgo())
+    //     .pipe(gulp.dest('./build/static/img/**/'));
+    // });
 };

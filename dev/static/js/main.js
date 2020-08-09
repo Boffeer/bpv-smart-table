@@ -68,7 +68,7 @@ $(document).ready(function () {
 	$('.trinkets-slider').slick({
 		// centerMode: true,
 		// centerPadding: '60px',
-		slidesToShow: 3,
+		slidesToShow: 3.5,
 		arrows: true,
 		infinite: false,
 		responsive: [{
@@ -123,6 +123,7 @@ $(document).ready(function () {
 		dotsClass: 'dots',
 		arrows: false,
 		infinite: false,
+		autoplay: true,
 	});
 	// ready end
 // 	$('.materials-inner').slick(
@@ -414,7 +415,9 @@ $('.burger-link').click(function(){
 
 // popup open
 $('.calculator-pop-open').click(function(){
-	$('.calculator-phone-pop-wrap').fadeIn(500);})
+	$('.calculator-phone-pop-wrap').fadeIn(500);
+	$('.calculator-img-wrap').css('position', 'relative')
+      $('.calculator-cost-dubler').css('display', 'none')})
 
 
 $('.close-phone-pop').click(function(){
@@ -503,7 +506,14 @@ $(window).scroll(function() {
     // if($(window).scrollTop() - 100 >= calcPos.top && $(window).scrollTop() < formPos.top)
     if($(window).scrollTop() >= $('.calculator').offset().top  && $(window).scrollTop() < $('.form').offset().top - 300)
     {
-      $('.calculator-img-wrap').css('position', 'fixed')
+    	if($('.calculator-phone-pop-wrap').css('display') == 'none'){
+	      $('.calculator-img-wrap').css('position', 'fixed')
+	      $('.calculator-cost-dubler').css('display', 'block')
+	  } else {
+      $('.calculator-img-wrap').css('position', 'relative')
+      $('.calculator-cost-dubler').css('display', 'none')
+
+	  }
       $('.calculator-img-wrap').css('height', '45vh')
       $('.calculator-img-wrap').css('top', '0px')
       $('.calculator-img-frame').css('top', '120px')
@@ -512,7 +522,6 @@ $(window).scroll(function() {
       $('.calculator-img-wrap').css('right', '0px')
       $('.calculator-img-wrap').css('background-color', '#ffffff')
       $('.calculator-form').css('padding-top', '360px')
-      $('.calculator-cost-dubler').css('display', 'block')
 			console.log("иф")
     }
     else
@@ -528,3 +537,37 @@ $(window).scroll(function() {
   }
 });
 
+
+$('.only-frame-btn').click(function(){
+	$('.only-frame-phone-pop-wrap').fadeIn(300)
+})
+
+
+
+
+
+// lazy
+ // $(function() {
+ //        $('.harm-img').Lazy();
+ //        $('.sportsman').Lazy();
+ //        $('.who-slide').Lazy();
+ //        $('.compare').Lazy();
+ //        $('.stat__pic').Lazy();
+ //        $('.own-img').Lazy();
+
+ //    });
+
+
+ // 60s
+
+ (function(e){var c=0,d={},a=0,b={init:function(f){return this.each(function(){d=jQuery.extend({achieveTime:60,loop:0,eventList:"touchmove blur focus focusin focusout load resize scroll unload click dblclick mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave change select submit keydown keypress keyup error",testPeriod:10,useMultiMode:1,callBack:function(g){console.log("Achieved!")},watchEvery:1,counter:{test:0,achiev:0}},f);d.watchEvery*=1000;if(d.useMultiMode){b.loadMultiData()}if(d.counter.achiev!=-1){e(this).bind(d.eventList,b.eventTrigger);b.process()}})},process:function(){d.counter.test+=1;if(d.counter.test==d.testPeriod){if(a){a=0;d.counter.achiev+=d.testPeriod}d.counter.test=0}c=setTimeout(b.process,d.watchEvery);if(d.counter.achiev>=d.achieveTime){if(!d.loop){clearTimeout(c)}d.counter.achiev=d.loop?0:-1;d.callBack.call(this,d)}if(d.useMultiMode){document.cookie="activity="+d.counter.test+"|"+d.counter.achiev+"; path=/;"}},eventTrigger:function(){a=1},loadMultiData:function(){var h=" activity=";var g=" "+document.cookie;if(g.length>0){if(g.indexOf(h)!=-1){offset=g.indexOf(h)+h.length;var f=unescape(g.substring(offset,g.indexOf(";",offset)==-1?g.length:g.indexOf(";",offset))).split("|");d.counter.test=parseInt(f[0]);d.counter.achiev=parseInt(f[1]);return;}}d.counter.test=d.counter.achiev=0}};e.fn.activity=function(f){if(b[f]){return b[f].apply(this,Array.prototype.slice.call(arguments,1))}else{if(typeof f==="object"||!f){return b.init.apply(this,arguments)}else{e.error("Method "+f+" does not exist on jQuery.activity")}}}})(jQuery);
+
+ $('body').activity({
+		'achieveTime':60
+		,'testPeriod':10
+		,useMultiMode: 1
+		,callBack: function (e) {
+			ga('send', 'event', 'Activity', '60_sec');
+			yaCounterXXXXXXXXX.reachGoal('60_sec');
+		}
+	});
