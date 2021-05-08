@@ -2832,6 +2832,13 @@ gulp-svgmin@^2.2.0:
     plugin-error "^1.0.1"
     svgo "^1.2.1"
 
+gulp-svgo@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/gulp-svgo/-/gulp-svgo-2.2.1.tgz#a89e3a8d2c3288b6cd5f1e074da53fe5bde3c591"
+  integrity sha512-SjAwrSGTyLOdGcXphCQuwSQyWNWTgTLbmgx7WYGAXrzuQSacA5dgxKDp7TPl5GrbdOpzMzXYnwlnDndzp95jtg==
+  dependencies:
+    svgo "^1.0.0"
+
 gulp-tinypng@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/gulp-tinypng/-/gulp-tinypng-1.0.2.tgz#81261eacaaa381fa48c0f42c62e9019975889ac0"
@@ -6559,7 +6566,7 @@ svg4everybody@^2.1.8:
   resolved "https://registry.yarnpkg.com/svg4everybody/-/svg4everybody-2.1.9.tgz#5bd9f6defc133859a044646d4743fabc28db7e2d"
   integrity sha1-W9n23vwTOFmgRGRtR0P6vCjbfi0=
 
-svgo@^1.1.1, svgo@^1.2.1:
+svgo@^1.0.0, svgo@^1.1.1, svgo@^1.2.1:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/svgo/-/svgo-1.3.2.tgz#b6dc511c063346c9e415b81e43401145b96d4167"
   integrity sha512-yhy/sQYxR5BkC98CY7o31VGsg014AKLEPxdfhora76l36hD9Rdy5NZA/Ocn6yayNPgSamYdtX2rFJdcv07AYVw==
@@ -6816,9 +6823,9 @@ typedarray@^0.0.6:
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
 ua-parser-js@^0.7.18:
-  version "0.7.21"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.21.tgz#853cf9ce93f642f67174273cc34565ae6f308777"
-  integrity sha512-+O8/qh/Qj8CgC6eYBVBykMrNtp5Gebn4dlGD/kKXVkJNDwyrAwSIqwz8CDf+tsAIWVycKcku6gIXJ0qwx/ZXaQ==
+  version "0.7.28"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
+  integrity sha512-6Gurc1n//gjp9eQNXjD9O3M/sMwVtN5S8Lv9bvOYBfKfDNiIIhqiyi01vMBO45u4zkDE420w/e0se7Vs+sIg+g==
 
 uglify-js@^2.4.13, uglify-js@^2.6.1, uglify-js@^2.7.0:
   version "2.8.29"
